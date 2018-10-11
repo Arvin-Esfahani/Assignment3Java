@@ -5,8 +5,7 @@ public class Intern extends Employee{
 	public Intern(String ID,String name, double grossSalary,double GPA) 
 	{
 		super(ID,name,grossSalary);
-		this.GPA=GPA;
-		
+		this.GPA=GPA;		
 	}
 	public double getGPA()
 	{
