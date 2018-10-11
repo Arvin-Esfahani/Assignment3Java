@@ -5,6 +5,5 @@ public class IO
 	public IO()
 	{
 		
-		
 	}
 }
