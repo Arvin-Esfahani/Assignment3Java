@@ -9,7 +9,12 @@ public class ReusaxCorp
 	
 	public ReusaxCorp()
 	{
-		this.expenses=123;
+		
+	}
+	
+	public double getExpenses()
+	{
+		return this.expenses;
 	}
 	
 	public Employee findEmployee(String ID)
@@ -143,6 +148,7 @@ public class ReusaxCorp
 		return e instanceof Intern;
 	}
 	
+	@SuppressWarnings("unused")
 	private boolean isEmployee(Object o)
 	{
 		return o instanceof Employee;
