@@ -40,4 +40,9 @@ public class Employee
 	{
 		this.grossSalary=newGrossSalary;
 	}
+	public String toString()
+	{
+		String string="<Employee>\nID:"+this.ID+"\nName:"+this.name+"\nGrossSalary:"+this.grossSalary;
+		return string;
+	}
 }

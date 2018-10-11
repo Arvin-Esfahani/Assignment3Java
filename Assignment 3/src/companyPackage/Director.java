@@ -33,8 +33,14 @@ public class Director extends Manager{
 	{
 		this.department=newDepartment;
 	}
-	public void setBenefit(double newBenefit)
+	public static void setBenefit(double newBenefit)
 	{
 		benefit=newBenefit;
+	}
+	public String toString()
+	{
+		String string="<Director>\nID:"+this.getID()+"\nName:"+this.getName()+"\nGrossSalary:"+this.getGrossSalary();
+		string+="\nDegree:"+this.getDegree()+"\nDepartment:"+this.department;
+		return string;
 	}
 }

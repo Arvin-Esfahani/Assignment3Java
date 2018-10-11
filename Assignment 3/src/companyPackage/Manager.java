@@ -40,4 +40,10 @@ public class Manager extends Employee {
 	{
 		this.degree=newDegree;
 	}
+	public String toString()
+	{
+		String string="<Manager>\nID:"+this.getID()+"\nName:"+this.getName()+"\nGrossSalary:"+this.getGrossSalary();
+		string+="\nDegree:"+this.getDegree();
+		return string;
+	}
 }
