@@ -26,6 +26,7 @@ public class Manager extends Employee {
 		{
 			return -1;
 		}
+		
 	}
 	public double getNetSalary()
 	{

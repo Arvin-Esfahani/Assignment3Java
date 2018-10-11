@@ -22,6 +22,7 @@ public class Director extends Manager{
 	{
 		return this.department;
 	}
+	
 	public static double getBenefit()
 	{
 		return benefit;// as it is an static variable we can not use this.

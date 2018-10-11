@@ -6,6 +6,7 @@ public class Intern extends Employee{
 	{
 		super(ID,name,grossSalary);
 		this.GPA=GPA;
+		
 	}
 	public double getGPA()
 	{
