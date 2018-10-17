@@ -9,7 +9,5 @@ public class Main {
 		r.registerEmployee("123", "ahman", 2000);
 		r.registerManager("234","bla",5000.0,"BCs.");
 		System.out.println(r.findEmployee("234"));
-			
-		
 	}
 }

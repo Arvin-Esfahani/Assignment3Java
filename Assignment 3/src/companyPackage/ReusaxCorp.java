@@ -231,7 +231,5 @@ public class ReusaxCorp
 		return this.employeeList.size();
 	}
 	
-	
-	
 }
 

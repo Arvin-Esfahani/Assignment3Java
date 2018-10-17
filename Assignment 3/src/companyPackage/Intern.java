@@ -1,6 +1,7 @@
 package companyPackage;
 
-public class Intern extends Employee{
+public class Intern extends Employee
+{
 	private double GPA;
 	public Intern(String ID,String name, double grossSalary,double GPA) 
 	{

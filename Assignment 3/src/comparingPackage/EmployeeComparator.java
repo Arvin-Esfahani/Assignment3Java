@@ -1,4 +1,7 @@
 package comparingPackage;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import companyPackage.*;
 public class EmployeeComparator implements Comparator<Employee> {
@@ -15,15 +18,15 @@ public class EmployeeComparator implements Comparator<Employee> {
 			return 1;
 		else if((e1 instanceof Manager) && !(e2 instanceof Director) && !(e2 instanceof Manager))
 			return 1;
-		else if((e1 instanceof Employee) && (e2 instanceof Intern))
+		else if(!(e1 instanceof Intern) && (e2 instanceof Intern))
 			return 1;
 		else if((e1 instanceof Director) && (e2 instanceof Director))
 			return 0;
 		else if((e1 instanceof Manager) && (e2 instanceof Manager))
 			return 0;
-		else if((e1 instanceof Employee) && (e2 instanceof Employee))
-			return 0;
 		else if((e1 instanceof Intern) && (e2 instanceof Intern))
+			return 0;
+		else if((e1 instanceof Employee) && (e2 instanceof Employee))
 			return 0;
 		else
 			return -1;
@@ -61,7 +64,36 @@ public class EmployeeComparator implements Comparator<Employee> {
 			return 1;
 		else
 			return -1;
-		
+	}
+	
+	public ArrayList<Employee> sortEmployees(Boolean ascending,ArrayList<Employee> employeeList)
+	{
+		Employee[] arr=new Employee[employeeList.size()];
+		int sortCounter=0;
+		while(sortCounter<employeeList.size()-1)
+		{
+			Employee smallest=employeeList.get(sortCounter);
+			for(int i=sortCounter+1;i<employeeList.size();i++)
+			{
+				if(compareName(smallest,employeeList.get(i))<0)
+				{
+					smallest=employeeList.get(i);
+				}
+			}
+			arr[sortCounter]=smallest;
+			sortCounter++;
+		}
+		if(ascending==true)
+		{
+			ArrayList<Employee> arrayList=new ArrayList<Employee>(Arrays.asList(arr));
+			return arrayList;
+		}
+		else
+		{
+			ArrayList<Employee> arrayList=new ArrayList<Employee>(Arrays.asList(arr));
+			Collections.reverse(arrayList);
+			return arrayList;
+		}
 	}
 
 }

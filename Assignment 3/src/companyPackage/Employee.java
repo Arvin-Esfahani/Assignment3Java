@@ -2,7 +2,7 @@ package companyPackage;
 
 public class Employee 
 {
-	private String ID;
+	private String ID;//Employee ID
 	private String name;
 	private double grossSalary;
 	public Employee(String employeeID, String employeeName,double employeeGrossSalary)
